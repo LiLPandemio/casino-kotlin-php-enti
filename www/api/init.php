@@ -28,4 +28,4 @@ $param = preg_split("/\//", $_REQUEST['endpointdir'], -1, PREG_SPLIT_NO_EMPTY);
 // $param[n] donde n es el parametro separado/por/barras guarda el directorio de la url consultada.
 
 //Lanzamiento de la estructura principal de la api.
-require("./api.php");
+require(ROOT . "/api/api.php");
