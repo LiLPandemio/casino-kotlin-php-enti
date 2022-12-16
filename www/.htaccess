@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php?page=$1 [NC,L,QSA]
+
+#PandemicAPI //By LiLPandemio
+RewriteRule ^api(/?|)$ api.php [NC,QSA]
+RewriteRule ^api/([^\/]+)(\/|)$ api.php?type=$1 [NC,QSA]
+
+RedirectMatch 403 ^/backups/?$
